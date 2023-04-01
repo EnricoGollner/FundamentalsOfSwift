@@ -1,4 +1,4 @@
-import Cocoa
+import UIKit
 
 // Tuple:
 var tp = ("Swift", 5, true)
@@ -50,4 +50,26 @@ class Poodle: Dog{
 let poodle = Poodle(name: "Luna")
 print(poodle.name)
 print(poodle.breed)
+
+
+// Enums:
+
+enum CompassDirections: String {
+    case North = "Go straight!"
+    case South = "Turn back!"
+    case East = "Turn right!"
+    case West = "Turn left!"
+}
+
+var compassDirection = CompassDirections.North
+
+switch compassDirection {
+case .North:
+    print(compassDirection.rawValue)
+case .South:
+    print(compassDirection.rawValue)
+default:
+    print("Couldn't get raw value")
+}
+
 
